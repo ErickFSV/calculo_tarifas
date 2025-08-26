@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Tarifas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Tarifas de Transporte</h1>
+    
+    <form id="formCalculo">
+      <div class="form-group">
+        <label for="origem">Origem:</label>
+        <select id="origem" required>
+          <option value="">Selecione a origem</option>
+          <!-- As opções serão preenchidas via JavaScript -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="destino">Destino:</label>
+        <select id="destino" required>
+          <option value="">Selecione o destino</option>
+          <!-- As opções serão preenchidas via JavaScript -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="nota">Valor da Nota (R$):</label>
+        <input type="number" id="nota" step="0.01" min="0" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.01" min="0" required>
+      </div>
+      
+      <button type="submit">Calcular</button>
+    </form>
+    
+    <div id="resultados" class="resultados">
+      <h2>Resultados</h2>
+      <div id="tabelaResultados"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
